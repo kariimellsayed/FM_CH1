@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background-color: #f6efe9;
+  font-family: "Merriweather", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  max-width: 37em;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.card .card-image {
+  width: 50%;
+}
+.card .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .card-content {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .card-content .category {
+  font-size: 0.9rem;
+  font-family: "Poppins", serif;
+  color: gray;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.card .card-content .title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #333;
+  margin: 10px 0;
+}
+.card .card-content .description {
+  font-size: 0.9rem;
+  font-family: "Poppins", serif;
+  color: gray;
+}
+.card .card-content .price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+.card .card-content .price .current-price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #2d6a4f;
+}
+.card .card-content .price .old-price {
+  text-decoration: line-through;
+  font-family: "Poppins", serif;
+  color: #868e96;
+  font-size: 0.8rem;
+  align-self: center;
+}
+.card .card-content .add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 600;
+  background: #2d6a4f;
+  font-family: "Poppins", serif;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+.card .card-content .add-to-cart:hover {
+  background: #1e4634;
+}
+
+@media (max-width: 48em) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    gap: 10;
+  }
+  .card .card-image {
+    width: 100%;
+  }
+  .card .card-content {
+    width: 100%;
+  }
+  .card .card-content .title {
+    font-size: 1.5em;
+  }
+  .card .card-content p {
+    font-size: 0.875rem;
+  }
+  .card .card-content .price {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+  }
+}/*# sourceMappingURL=style.css.map */
